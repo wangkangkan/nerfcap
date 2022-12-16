@@ -1,0 +1,75 @@
+task: 'if_nerf'
+gpus: [0]
+
+train_dataset_module: 'lib.datasets.light_stage.multi_view_dataset_vertoffset'
+train_dataset_path: 'lib/datasets/light_stage/multi_view_dataset_vertoffset.py'
+test_dataset_module: 'lib.datasets.light_stage.multi_view_dataset_vertoffset'
+test_dataset_path: 'lib/datasets/light_stage/multi_view_dataset_vertoffset.py'
+
+network_module: 'lib.networks.occupancy_network'
+network_path: 'lib/networks/occupancy_network.py'
+renderer_module: 'lib.networks.renderer.if_clight_renderer_msk'
+renderer_path: 'lib/networks/renderer/if_clight_renderer_msk.py'
+
+trainer_module: 'lib.train.trainers.if_nerf_clight'
+trainer_path: 'lib/train/trainers/if_nerf_clight.py'
+
+evaluator_module: 'lib.evaluators.if_nerf'
+evaluator_path: 'lib/evaluators/if_nerf.py'
+
+train_dataset:
+    data_root: 'tools/data/magdalena20000-allviews'
+    human: 'test5450'
+    ann_file: 'tools/data/magdalena20000-allviews/annots.npy'
+    split: 'train'
+
+test_dataset:
+    data_root: 'tools/data/magdalena20000-allviews'
+    human: 'test5450'
+    ann_file: 'tools/data/magdalena20000-allviews/annots.npy'
+    split: 'test'
+
+train:
+    batch_size: 1
+    collator: ''
+    lr: 5e-4
+    weight_decay: 0
+    epoch: 400
+    scheduler:
+        type: 'exponential'
+        gamma: 0.1
+        decay_epochs: 1000
+    num_workers: 24
+
+test:
+    batch_size: 1
+    collator: ''
+
+ep_iter: 800
+save_ep: 100
+
+# rendering options
+i_embed: 0
+xyz_res: 10
+view_res: 4
+raw_noise_std: 0
+
+N_samples: 64
+N_importance: 128
+N_rand: 1024
+
+perturb: 1
+white_bkgd: False
+
+num_render_views: 50
+
+# data options
+H: 1024
+W: 1024
+ratio: 1.
+num_train_frame: 300
+
+voxel_size: [0.005, 0.005, 0.005]  # dhw
+
+# record options
+log_interval: 1
