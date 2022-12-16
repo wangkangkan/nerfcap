@@ -2,6 +2,11 @@
 ### [Project Page](https://wangkangkan.github.io/nerfcap) | [Video](http://www.cad.zju.edu.cn/home/gfzhang/papers/NerfCap/NerfCap_video.mp4) | [Paper](http://www.cad.zju.edu.cn/home/gfzhang/papers/NerfCap/NerfCap_TVCG_2022.pdf)
 >Kangkan Wang, Sida Peng, Xiaowei Zhou, Jian Yang, Guofeng Zhang
 
+Official implementation of Human Performance Capture With Dynamic Neural Radiance Fields.
+
+Questions and discussions are welcomed!
+Feel free to contact Kangkan Wang via wangkangkan@njust.edu.cn
+
 ## Installation
 ### Set up python environment
 ```
