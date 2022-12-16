@@ -1,5 +1,5 @@
 # NerfCap: Human Performance Capture With Dynamic Neural Radiance Fields
-### [Project Page](https://github.io/nerfcap) | [Video](http://www.cad.zju.edu.cn/home/gfzhang/papers/NerfCap/NerfCap_video.mp4) | [Paper](http://www.cad.zju.edu.cn/home/gfzhang/papers/NerfCap/NerfCap_TVCG_2022.pdf)
+### [Project Page](https://wangkangkan.github.io/nerfcap) | [Video](http://www.cad.zju.edu.cn/home/gfzhang/papers/NerfCap/NerfCap_video.mp4) | [Paper](http://www.cad.zju.edu.cn/home/gfzhang/papers/NerfCap/NerfCap_TVCG_2022.pdf)
 >Kangkan Wang, Sida Peng, Xiaowei Zhou, Jian Yang, Guofeng Zhang
 
 ## Installation
